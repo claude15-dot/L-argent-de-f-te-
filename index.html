@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Argent de Fête</title>
+<title>L’argent de fête</title>
 <meta name="description" content="Le jeu qui calcule, pour rire, combien ton partenaire doit donner (ou recevoir) pour les fêtes.">
-<meta name="theme-color" content="#2b0a3d">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Argent de Fête">
+<meta property="og:title" content="L’argent de fête">
 <meta property="og:description" content="Combien ton partenaire doit-il vraiment donner (ou recevoir) pour les fêtes ? Fais le test, pour rire.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧮%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎄%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&family=Bodoni+Moda:wght@400;500&display=swap">
 <style>
-:root{--bg:#fff0f6;--card:#fff;--ink:#2b0a3d;--mut:#7d5a92;--pk:#ff3d7f;--mg:#ffb100;--line:#f1cfe0;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#22082f;--card:#33104a;--ink:#fff3fa;--mut:#c7a3dc;--line:#4d2169}}
-:root[data-theme="dark"]{--bg:#22082f;--card:#33104a;--ink:#fff3fa;--mut:#c7a3dc;--line:#4d2169}
+:root{--bg:#fff7ee;--card:#fff;--ink:#12351f;--mut:#6b7a6f;--pk:#c8102e;--mg:#f2b632;--line:#e8d9bf;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b2e22;--card:#12402f;--ink:#fff7e6;--mut:#a9c7b5;--line:#1f5a43}}
+:root[data-theme="dark"]{--bg:#0b2e22;--card:#12402f;--ink:#fff7e6;--mut:#a9c7b5;--line:#1f5a43}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:500 16px/1.4 Nunito,system-ui,sans-serif}
@@ -43,7 +43,7 @@ h2{font-size:1.35rem;line-height:1.2;margin:18px 0 14px}
 .opt{background:var(--card);color:var(--ink);border:2px solid var(--line)}
 .opt.sel{border-color:var(--pk);background:var(--pk);color:var(--on)}
 .opt:disabled:not(.sel){opacity:.45}
-.next,.btn{background:var(--mg);color:#2b0a3d}
+.next,.btn{background:var(--mg);color:#12351f}
 .btn.alt{background:var(--card);color:var(--ink);border:2px solid var(--line)}
 .btn.pink{background:var(--pk);color:#fff}
 .back{background:none;border:0;color:var(--mut);font:800 1rem Nunito,sans-serif;padding:6px 0;cursor:pointer}
@@ -57,30 +57,53 @@ input{width:100%;padding:14px;border-radius:14px;border:2px solid var(--line);ba
 .led div{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--line)}
 .fall{position:fixed;top:-2.5rem;font-size:1.7rem;animation:fall linear forwards;pointer-events:none;z-index:5}
 @keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
-.ov{position:fixed;inset:0;background:rgba(20,0,30,.65);display:flex;align-items:center;justify-content:center;padding:20px;z-index:9}
+.ov{position:fixed;inset:0;background:rgba(5,25,15,.65);display:flex;align-items:center;justify-content:center;padding:20px;z-index:9}
 .ov .card{max-width:380px;text-align:center}
 .det{text-align:left;margin-top:12px;background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:10px}.det summary{font-weight:800;cursor:pointer}.dr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:.92rem}.dr small{color:var(--mut)}.pos{color:#1fa971}.neg{color:#e5484d}.det h3{margin:10px 0 2px;font-size:1rem}
 .tabs{display:flex;gap:6px;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:6px;margin-top:14px}
 .tab{flex:1;border:0;border-radius:13px;padding:10px 4px;background:none;color:var(--mut);font:800 .85rem Nunito,sans-serif;cursor:pointer}
-.tab.on{background:var(--mg);color:#2b0a3d}
+.tab.on{background:var(--mg);color:#12351f}
 .ch{text-align:center;font-weight:800;color:var(--pk);margin:16px 0 8px}
 .pl{display:flex;flex-direction:column;gap:10px}
 .pr{display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:12px;color:var(--ink);font:inherit;cursor:pointer}
 .pr:active{transform:scale(.98)}
-.pt{flex:none;width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;border:2px solid #2b0a3d}
+.pt{flex:none;width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.9rem;border:2px solid #12351f}
 .pb{display:flex;flex-direction:column;gap:2px;min-width:0}
 .pn{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .pn b{font-family:'Bagel Fat One',Nunito,sans-serif;font-weight:400;font-size:1.1rem}
 .pb small{color:var(--mut);line-height:1.25}
 .pb em{font-style:normal;font-size:.8rem;font-weight:800;color:var(--pk)}
-.bd{font-style:normal;font-size:.68rem;font-weight:800;background:var(--mg);color:#2b0a3d;border-radius:99px;padding:2px 8px}
+.bd{font-style:normal;font-size:.68rem;font-weight:800;background:var(--mg);color:#12351f;border-radius:99px;padding:2px 8px}
 .bd.pay{background:var(--pk);color:#fff}
-.af{color:#e5242b;font-weight:800}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .af{color:#ff5a5f}}:root[data-theme="dark"] .af{color:#ff5a5f}
+.af{color:#e5242b;font-weight:800}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .af{color:#ff7b7b}}:root[data-theme="dark"] .af{color:#ff7b7b}
+.gl{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:14px;z-index:6;pointer-events:none;animation:tw 1.6s ease-in-out infinite alternate;background:radial-gradient(circle at 7px 7px,#c8102e 0 4px,transparent 5px) 0 0/42px 14px repeat-x,radial-gradient(circle at 7px 7px,#f2b632 0 4px,transparent 5px) 14px 0/42px 14px repeat-x,radial-gradient(circle at 7px 7px,#2e8b57 0 4px,transparent 5px) 28px 0/42px 14px repeat-x}
+@keyframes tw{from{opacity:1}to{opacity:.5}}
+#sp{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;overflow:hidden;background:radial-gradient(circle at 50% 30%,#14533a,#0b2e22 72%);color:#fff7e6;transition:opacity .5s}
+#sp.out{opacity:0}
+#sp>*{position:relative;z-index:2}
+#sp .tree{font-size:5rem;line-height:1;animation:pop 1.2s ease-in-out infinite alternate}
+#sp h1{font-size:3.1rem;line-height:1.02;color:#f2b632;text-shadow:0 3px 0 #c8102e,0 6px 18px rgba(0,0,0,.35);margin:14px 0 8px}
+#sp p{color:#cfe8d8;margin:0 0 22px}
+.sbar{width:min(260px,70vw);height:10px;border-radius:9px;background:rgba(255,255,255,.18);overflow:hidden}
+.sbar div{height:100%;width:0;background:linear-gradient(90deg,#f2b632,#c8102e);animation:fill 5s linear forwards}
+@keyframes fill{to{width:100%}}
+#sp .fl{position:absolute;top:-2rem;color:#fff;opacity:.9;pointer-events:none;animation:fall linear infinite}
+#sp .bill{z-index:1;top:-4rem;width:128px;height:60px;border-radius:5px;display:flex;align-items:center;gap:6px;padding:0 8px;opacity:1;border:2px solid rgba(255,255,255,.7);box-shadow:0 3px 8px rgba(0,0,0,.4);overflow:hidden;color:#fff;white-space:nowrap}
+#sp .bill b{font:800 1.25rem Nunito,system-ui,sans-serif;letter-spacing:.02em}
+#sp .bill i{font:800 .42rem/1.25 Nunito,system-ui,sans-serif;font-style:normal;text-align:left;opacity:.95}
+#sp .b5{background:repeating-linear-gradient(135deg,rgba(255,255,255,.16) 0 7px,transparent 7px 14px),linear-gradient(135deg,#bfe6a8,#6cbf74 55%,#2f8f55);color:#0f3b20;text-shadow:0 1px 0 rgba(255,255,255,.4)}
+#sp .b10{background:repeating-linear-gradient(135deg,rgba(255,255,255,.14) 0 7px,transparent 7px 14px),linear-gradient(135deg,#efc9e8,#b983c6 50%,#6b4a9e);color:#2f0f4a;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+#in{position:fixed;inset:0;z-index:40;background:#000;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px;transition:opacity .5s}
+#in.out{opacity:0}
+#in h1{font-family:Didot,'Bodoni 72','Bodoni Moda','Bodoni MT','Playfair Display','Times New Roman',serif;font-weight:400;font-size:2.4rem;line-height:1.25;letter-spacing:.05em;color:#fff;margin:0;opacity:0;animation:fin 1.2s ease .2s forwards}
+@keyframes fin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.gl,#sp .tree,#sp .fl{animation:none}}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-weight:800;z-index:10}
 @media (prefers-reduced-motion:reduce){.pop,.fall{animation:none}}
 </style>
 </head>
 <body>
+<div class="gl"></div>
 <div id="app"></div>
 <script>
 const Q=(t,a,v,m,e,b,w,n,f)=>[t,[[a,v,m,e],[b,w,n,f]]];
@@ -164,7 +187,7 @@ function ledgerHTML(){
 }
 let TABK='femmes';
 const TABS=[['hommes','👨','HOMMES',[4,5,7,6,8],'Choisis ton statut actuel'],['femmes','👩','FEMMES',[0,1,2],'Choisis ton statut actuel'],['kpakpato','🔍','KPAKPATO',[3],'Juge le couple de tes amis']];
-const TC=['#ffcf3f','#5bb3f0','#ff9a3c','#b794f6','#35d69a','#f57bbf','#4dd0e1','#ff6b6b','#a3e635'];
+const TC=['#f2b632','#2e8b57','#c8102e','#d4a017','#1f7a4d','#b22234','#3cb371','#e0a526','#8fbf6a'];
 function setTab(k){TABK=k;home()}
 const hl=t=>t.replace(/([lL][’'])argent de fête/g,'<b class="af">$1argent de fête</b>');
 function cardHTML(i){
@@ -175,7 +198,7 @@ function cardHTML(i){
 function home(){
   S=null;
   const t=TABS.find(x=>x[0]===TABK);
-  app.innerHTML=`<div class="top"><div class="mas">🧮</div><h1>Argent de Fête</h1><p>Combien ton partenaire doit-il vraiment donner (ou recevoir) ?</p></div>
+  app.innerHTML=`<div class="top"><div class="mas">🧮</div><h1>L’<span class="af">argent de fête</span></h1><p>Combien ton partenaire doit-il vraiment donner (ou recevoir) ?</p></div>
   <div class="tabs">${TABS.map(x=>`<button class="tab${x[0]===TABK?' on':''}" onclick="setTab('${x[0]}')">${x[1]} ${x[2]}</button>`).join('')}</div>
   <p class="ch">👇 ${t[4]}</p>
   <div class="pl">${t[3].map(cardHTML).join('')}</div>
@@ -379,29 +402,29 @@ function makeCard(title,sub,rows,amt){
   const rh=it=>it.ql.length*48+it.al.length*40+44;
   const H=Math.max(1920,700+items.reduce((s,it)=>s+rh(it),0));
   cv.width=W;cv.height=H;
-  const dash=yy=>{c.strokeStyle='#2b0a3d';c.lineWidth=4;c.setLineDash([22,16]);c.beginPath();c.moveTo(pad,yy);c.lineTo(W-pad,yy);c.stroke();c.setLineDash([])};
-  c.fillStyle='#ffb100';c.fillRect(0,0,W,H);
+  const dash=yy=>{c.strokeStyle='#12351f';c.lineWidth=4;c.setLineDash([22,16]);c.beginPath();c.moveTo(pad,yy);c.lineTo(W-pad,yy);c.stroke();c.setLineDash([])};
+  c.fillStyle='#c8102e';c.fillRect(0,0,W,H);
   c.fillStyle='#fff';c.fillRect(30,60,W-60,H-120);
-  c.textAlign='center';c.fillStyle='#2b0a3d';
+  c.textAlign='center';c.fillStyle='#12351f';
   c.font='400 64px "Bagel Fat One",Nunito,sans-serif';c.fillText('ARGENT DE FÊTE',W/2,170);
   c.font='800 42px Nunito,sans-serif';c.fillText(title,W/2,240);
-  c.fillStyle='#7d5a92';c.font='700 38px Nunito,sans-serif';c.fillText(sub,W/2,300);
+  c.fillStyle='#6b7a6f';c.font='700 38px Nunito,sans-serif';c.fillText(sub,W/2,300);
   let y=350;dash(y);y+=30;
   items.forEach(it=>{
     let yy=y+40;
-    c.textAlign='left';c.fillStyle='#2b0a3d';c.font=fq;it.ql.forEach(l=>{c.fillText(l,pad,yy);yy+=48});
-    c.fillStyle='#7d5a92';c.font=fa;it.al.forEach(l=>{c.fillText(l,pad,yy);yy+=40});
+    c.textAlign='left';c.fillStyle='#12351f';c.font=fq;it.ql.forEach(l=>{c.fillText(l,pad,yy);yy+=48});
+    c.fillStyle='#6b7a6f';c.font=fa;it.al.forEach(l=>{c.fillText(l,pad,yy);yy+=40});
     c.textAlign='right';c.fillStyle=it.v<0?'#e5484d':'#1fa971';c.font='800 44px Nunito,sans-serif';c.fillText(sg(it.v)+' F',W-pad,y+44);
     y+=rh(it);
     c.strokeStyle='#eee';c.lineWidth=3;c.beginPath();c.moveTo(pad,y-14);c.lineTo(W-pad,y-14);c.stroke();
   });
   y+=10;dash(y);y+=50;
-  c.fillStyle='#ffe14d';c.strokeStyle='#2b0a3d';c.lineWidth=6;c.beginPath();
+  c.fillStyle='#ffe14d';c.strokeStyle='#12351f';c.lineWidth=6;c.beginPath();
   if(c.roundRect)c.roundRect(pad,y,W-2*pad,270,24);else c.rect(pad,y,W-2*pad,270);
   c.fill();c.stroke();
-  c.textAlign='center';c.fillStyle='#2b0a3d';c.font='800 38px Nunito,sans-serif';c.fillText('MONTANT FINAL',W/2,y+75);
+  c.textAlign='center';c.fillStyle='#12351f';c.font='800 38px Nunito,sans-serif';c.fillText('MONTANT FINAL',W/2,y+75);
   c.font=fb;c.fillText(F(amt),W/2,y+205);
-  c.fillStyle='#7d5a92';c.font='700 34px Nunito,sans-serif';c.fillText('🎭 C\'est un jeu, pour rire ! • Argent de Fête',W/2,H-110);
+  c.fillStyle='#6b7a6f';c.font='700 34px Nunito,sans-serif';c.fillText('🎭 C\'est un jeu, pour rire ! • Argent de Fête',W/2,H-110);
   return cv;
 }
 function showImg(u,t){
@@ -433,7 +456,21 @@ async function shareIt(){
     await navigator.clipboard.writeText(t);toast('Copié ! Colle-le en Status 📲');
   }catch(e){if(e&&e.name!=='AbortError')toast('Copie le texte ci-dessus à la main')}
 }
+function splash(){
+  const o=document.createElement('div');o.id='sp';
+  o.innerHTML='<div class="tree">🎄</div><h1>L’argent<br>de fête</h1><p>Joyeuses fêtes ! 🎁<br>Le jeu qui calcule, pour rire…</p><div class="sbar"><div></div></div>';
+  for(let i=0;i<16;i++){const f=document.createElement('span');const d=i%2?['5000','CINQ MILLE','b5']:['10000','DIX MILLE','b10'];f.className='fl bill '+d[2];f.innerHTML='<b>'+d[0]+'</b><i>'+d[1]+'<br>FRANCS CFA</i>';f.style.left=Math.random()*100+'%';f.style.zoom=(.85+Math.random()*.5);f.style.animationDuration=(4+Math.random()*4)+'s';f.style.animationDelay=(-Math.random()*6)+'s';o.appendChild(f)}
+  document.body.appendChild(o);
+  setTimeout(()=>{o.classList.add('out');setTimeout(()=>o.remove(),500)},5000);
+}
+function intro(){
+  const o=document.createElement('div');o.id='in';
+  o.innerHTML='<h1>The Black<br>Champagne<br>Entertainment</h1>';
+  document.body.appendChild(o);
+  setTimeout(()=>{o.classList.add('out');setTimeout(()=>o.remove(),500);splash()},3000);
+}
 home();
+intro();
 </script>
 </body>
 </html>

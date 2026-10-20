@@ -1,4 +1,4 @@
-# Argent de Fête (prototype)
+# L’argent de fête (prototype)
 
 Le jeu qui calcule, **pour rire**, combien ton partenaire doit donner (ou recevoir) pour les fêtes : Noël, 31 décembre, Saint-Valentin, anniversaire.
 
@@ -16,6 +16,8 @@ Ou ouvre simplement le fichier `index.html` dans un navigateur.
 
 ## Ce que contient le prototype
 
+- Une **première page noire** « The Black Champagne Entertainment » (police Didot, 3 secondes), puis un **écran d'ouverture festif** (sapin et billets de 5 000 et 10 000 FCFA qui tombent) qui affiche le nom « L'argent de fête » pendant 5 secondes, puis la page de choix des profils.
+- Un thème aux **couleurs de Noël** (rouge, vert, or) avec une guirlande lumineuse.
 - 9 profils, répartis en trois onglets : **Hommes**, **Femmes**, **Kpakpato**.
 - Questions de mérite, de compensation et hors sujet, avec réactions de la mascotte.
 - Profils multi-partenaires (menuisière, djandjou) : jusqu'à 5 partenaires, duel entre rivales et méga bonus.
