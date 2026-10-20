@@ -16,7 +16,7 @@ Ou ouvre simplement le fichier `index.html` dans un navigateur.
 
 ## Ce que contient le prototype
 
-- Une **première page noire** « The Black Champagne Entertainment » (police Didot, 3 secondes), puis un **écran d'ouverture festif** (sapin et billets de 5 000 et 10 000 FCFA qui tombent) qui affiche le nom « L'argent de fête » pendant 5 secondes, puis la page de choix des profils.
+- Une **première page noire** avec le logo « THE BLACK CHAMPAGNE ENTERTAINMENT. » dans un cadre carré blanc (3 secondes), puis un **écran d'ouverture festif** (sapin et billets de 5 000 et 10 000 FCFA qui tombent) qui affiche le nom « L'argent de fête » pendant 5 secondes, puis la page de choix des profils.
 - Un thème aux **couleurs de Noël** (rouge, vert, or) avec une guirlande lumineuse.
 - 9 profils, répartis en trois onglets : **Hommes**, **Femmes**, **Kpakpato**.
 - Questions de mérite, de compensation et hors sujet, avec réactions de la mascotte.

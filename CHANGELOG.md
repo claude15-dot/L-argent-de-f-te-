@@ -1,5 +1,9 @@
 # Historique des versions
 
+## 0.3.1 - 20 octobre 2026
+
+- Première page refaite selon le logo : cadre carré blanc sur fond noir, « THE » en très gros, puis « BLACK CHAMPAGNE » et « ENTERTAINMENT. ».
+
 ## 0.3.0 - 19 octobre 2026
 
 - Nouvelle toute première page : fond noir, « The Black Champagne Entertainment » en Didot (police Bodoni Moda en secours), 3 secondes.

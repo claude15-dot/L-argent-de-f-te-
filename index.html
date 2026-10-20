@@ -10,7 +10,7 @@
 <meta property="og:title" content="L’argent de fête">
 <meta property="og:description" content="Combien ton partenaire doit-il vraiment donner (ou recevoir) pour les fêtes ? Fais le test, pour rire.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎄%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&family=Bodoni+Moda:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&family=Poppins:wght@700;800&display=swap">
 <style>
 :root{--bg:#fff7ee;--card:#fff;--ink:#12351f;--mut:#6b7a6f;--pk:#c8102e;--mg:#f2b632;--line:#e8d9bf;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b2e22;--card:#12402f;--ink:#fff7e6;--mut:#a9c7b5;--line:#1f5a43}}
@@ -95,7 +95,13 @@ input{width:100%;padding:14px;border-radius:14px;border:2px solid var(--line);ba
 #sp .b10{background:repeating-linear-gradient(135deg,rgba(255,255,255,.14) 0 7px,transparent 7px 14px),linear-gradient(135deg,#efc9e8,#b983c6 50%,#6b4a9e);color:#2f0f4a;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 #in{position:fixed;inset:0;z-index:40;background:#000;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px;transition:opacity .5s}
 #in.out{opacity:0}
-#in h1{font-family:Didot,'Bodoni 72','Bodoni Moda','Bodoni MT','Playfair Display','Times New Roman',serif;font-weight:400;font-size:2.4rem;line-height:1.25;letter-spacing:.05em;color:#fff;margin:0;opacity:0;animation:fin 1.2s ease .2s forwards}
+#in{--w:min(66vw,380px)}
+.lg{width:var(--w);height:var(--w);border:calc(var(--w)*.044) solid #fff;display:flex;align-items:center;justify-content:center;opacity:0;animation:fin 1.2s ease .2s forwards}
+.lgt{display:flex;flex-direction:column;align-items:center;gap:calc(var(--w)*.014);margin-top:-5%;font-family:Poppins,Montserrat,system-ui,sans-serif;color:#fff;text-align:center}
+.lgt b{font-weight:700;line-height:1;white-space:nowrap}
+.lgt .t1{font-size:calc(var(--w)*.285);font-weight:800;letter-spacing:.03em}
+.lgt .t2{font-size:calc(var(--w)*.082)}
+.lgt .t3{font-size:calc(var(--w)*.088)}
 @keyframes fin{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.gl,#sp .tree,#sp .fl{animation:none}}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-weight:800;z-index:10}
@@ -465,7 +471,7 @@ function splash(){
 }
 function intro(){
   const o=document.createElement('div');o.id='in';
-  o.innerHTML='<h1>The Black<br>Champagne<br>Entertainment</h1>';
+  o.innerHTML='<div class="lg"><div class="lgt"><b class="t1">THE</b><b class="t2">BLACK CHAMPAGNE</b><b class="t3">ENTERTAINMENT.</b></div></div>';
   document.body.appendChild(o);
   setTimeout(()=>{o.classList.add('out');setTimeout(()=>o.remove(),500);splash()},3000);
 }
